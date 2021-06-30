@@ -6,7 +6,6 @@
 int main(){
    int fd1, fd2, n;
    char buff[10];
-   char buff2[1];
 
    fd1 = open ("abc.txt", O_RDONLY);
    fd2 = dup(fd1);
