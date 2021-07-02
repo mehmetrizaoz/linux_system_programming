@@ -4,8 +4,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 int main(int argc, char *argv[]){
-    char passwd[50];
-    printf("Password:");
+    char passwd[50];    
 
     //get attributes
     struct termios info;
@@ -13,6 +12,13 @@ int main(int argc, char *argv[]){
 
     //save a copy of original attributes
     struct termios save = info;
+
+    if (info.c_lflag & ICANON)
+        printf("Terminal driver is in canonical mode\n");
+    else
+        printf("Terminal driver is in non-canonical mode\n");
+
+    printf("Password:");
 
     //make the echo bit off and set attributes
     info.c_lflag &= ~ECHO;        
