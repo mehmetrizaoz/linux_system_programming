@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
-int main()
-{
+
+int main(){
     printf("My PID is: %ld\n", (long)getpid());
     printf("My PPID is: %ld\n", (long)getppid());
 
@@ -11,5 +11,5 @@ int main()
     printf("My Real group-ID is: %ld\n", (long)getgid());
     printf("My Effective group-ID is: %ld\n", (long)getegid());
 
-   return 0;
+    return 0;
 }
