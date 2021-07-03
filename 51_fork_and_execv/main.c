@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <wait.h>
+
+int main(){
+   int status;
+   pid_t cpid = fork();
+   if (cpid == 0){
+      char *argv[]={"myls","-l","/home",'\0'};
+      execv("/bin/ls",argv);
+      perror("exec failed");   
+  }
+   else{
+      wait(&status);
+      printf("Hello I m Parent.\n");
+   }
+   return 0;
+}
