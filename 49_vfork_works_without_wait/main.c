@@ -1,3 +1,6 @@
+/*  Proves that after a vfork() call, child execute first and the parent 
+automatically waits, and starts its execution after the child terminates*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -17,3 +20,4 @@ int main(){
       exit(0);
    }
 }
+
