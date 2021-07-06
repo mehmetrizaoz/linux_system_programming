@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -std=c11 -O0 -Wall -g
+CFLAGS= -std=gnu99 -O0 -Wall -g
 INCLUDES=.
 LIBS = -lc -lpthread
 OBJS= main.o
