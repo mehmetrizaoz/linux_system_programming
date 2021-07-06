@@ -1,12 +1,3 @@
-/*
-*  Video Lecture: 25
-*  Programmer: Arif Butt
-*  Course: System Programming with Linux
-*  The process enters in an infinite loop, and use sigaction() to ignore SIGINT and SIGFPE
-*  When the user press <CTRL + C> the OS sends SIGINT<2> to the process
-*  and the process ignores it and do not terminates
-*/
-
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

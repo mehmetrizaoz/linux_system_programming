@@ -1,9 +1,8 @@
-
-
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h> 
 #include <unistd.h>
+
 void  myhandler(int signum){
    printf("Hey, I got signal: %d\n",signum);
    for(int i=1; i<=5; i++){
