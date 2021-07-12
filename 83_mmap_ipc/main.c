@@ -1,13 +1,3 @@
-/*
-*  Video Lecture: 30
-*  Programmer: Arif Butt
-*  Course: System Programming with Linux
-*  Program mmaps an entire file in its address space
-*  and then do a fork, both the child and parent
-*  displays contents of file on stdout
-*  usage: ./mmap2
-*/
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
